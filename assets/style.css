@@ -1,5 +1,94 @@
+/*This block of code was set in place to prevent browser modifications
+and start with a fresh canvas.*/  
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
+    /*This section prevents the reuse of code by applying the same text color and font to the entire project. 
+    Furthermore, gives a variety of fonts, in case a browser does not support one of the fonts*/
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+/*gray and sky blue were used a lot throught the project. Therefore, variables were created to make it faster to style*/
+:root {
+    --gray: rgb(56, 61, 73);
+    --sky-blue: rgb(119, 205, 202);
+}
+
+header {
+    background-color: var(--gray);   /*Gives header background color*/
+}
+
+h1 {     /*Edits the my name*/
+    display: inline-block;  /*Inline block was put in place, to allow multiple items in the row. It will also allow us to move it down using margin-top*/
+    background-color: var(--sky-blue); 
+    color: var(--gray);
+    margin-top: 30px;
+    padding-left: 30px; 
+    font-size: 50px;
+}
+
+header nav {
+    position: absolute;   /*Position absolute was used for nav, because it allows us to remove it from the document flow, and place it on the top, right corner*/
+    top: 40px;
+    right: 0px;
+}
+
+
+ul li {
+    list-style: none;      /*Removes bullet points*/
+    display: inline-block; /*Inline-block was used to set list items as a row*/
+    margin-right: 50px;    /*Adds 50px of space between the list items*/
+    font-size: 25px;      
+    color: var(--sky-blue);
+    border-bottom: 5px solid var(--sky-blue);   /*Border on the bottom was added, to underline the list items*/
+}
+
+
+
+
+.subtitle-background {
+    display: flex;    /*flexbox container was created, to be able to move the subtitle to the correct spot*/
+    flex-direction: row-reverse;  /*Moves the subtitle to the right*/
+    margin-top: 30px;  /*Adds space between the striped background and the content above*/ 
+    padding: 70px 0px 70px;    /*expands the top and bottom side of the striped background*/
+    
+
+    /*This section of code gives the subtitle a stiped background
+    Credit to James Formica on Youtube: https://www.youtube.com/watch?v=SsBrt2hLLS0*/
+    background-image: repeating-linear-gradient(    
+        135deg,
+        rgb(47, 55, 85) 0px,
+        rgb(47, 55, 85) 100px,
+        rgb(123, 167, 166) 100px,
+        rgb(123, 167, 166) 200px
+    );
+}
+
+
+.subtitle {
+    background-color: var(--sky-blue);
+    padding-right: 100px;
+}
+
+
+/*A media quary was added, so that the h1 and nav content will not touch or overlap.
+Right before they touch, the nav element becomes relative so that it follows the document flow.
+Forcing the nav element to go under the h1 element*/
+@media only screen and (max-width: 1160px) {
+    header nav {
+        position: relative;
+    }
+
+    /*Adds space between the the list items and the striped background, when the screen is
+    smaller than 1160px*/
+    ul li {
+        margin-bottom: 50px;
+    }
+}
+
+
+
+
+
