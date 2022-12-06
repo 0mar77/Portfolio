@@ -41,12 +41,15 @@ ul li {
     display: inline-block; /*Inline-block was used to set list items as a row*/
     margin-right: 50px;    /*Adds 50px of space between the list items*/
     font-size: 25px;      
-    color: var(--sky-blue);
     border-bottom: 5px solid var(--sky-blue);   /*Border on the bottom was added, to underline the list items*/
 }
 
-
-
+/*Corrected the color and removed underline from the anchor
+Credits to Module-Challenge-1*/
+a {
+    color: var(--sky-blue);
+    text-decoration: none;
+}
 
 .subtitle-background {
     display: flex;    /*flexbox container was created, to be able to move the subtitle to the correct spot*/
@@ -69,8 +72,114 @@ ul li {
 
 .subtitle {
     background-color: var(--sky-blue);
-    padding-right: 100px;
+    color: var(--gray);
+    margin-inline: 80px;
+    padding: 10px;
 }
+
+/*Adds background color to the main section*/
+main {
+    background-color: aliceblue;
+}
+
+/*Flex was used to position all content and have it adjust 
+the content as the screen gets smaller*/
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*This section gives style and position to the paragraph in the about me section*/
+.about-me-p {
+    font-size: 20px;
+    margin-left: 80px;
+    display: flex;
+    align-items: center;
+}
+
+#about-me-h3,
+#work-h3,
+#contact-me-h3{
+    font-size: 50px;
+    color: var(--gray);
+    margin-inline: 90px;
+}
+
+.work-section h3, .cards{
+    display: inline-block;
+    
+}
+
+.card-deck {
+    width: 70%;
+}
+
+/*Added style and position to the image cards*/
+.cards {
+    border: 20px solid var(--sky-blue);
+    margin: 20px;
+    position: relative;
+    background-color: black;
+    width: 40%;
+    float:right;
+}
+
+/*Added style and size to the image*/
+img {
+    height: auto;
+    width: 500px;
+    position: relative;
+    opacity: 0.7;
+    width: 100%;
+}
+
+/*Added width to the first card, so that it may be bigger than the rest*/
+.card-1 {
+    width: 90%;
+}
+
+/*The hover effect on the images, was a 3 step process. First, the background-color
+in class cards was altered. Second, the img opacity was set to 0.7. And last of all, the 
+opacity was brought back to one, when you hover over the image.
+Credits to codebubb on Youtube: https://www.youtube.com/watch?v=h3gktsmp3Oo*/
+img:hover {
+    opacity: 1;
+}
+
+/*Positioned the card info on top of the image and gave it style*/
+.card-info {
+    background-color: var(--sky-blue);
+    position: absolute;
+    bottom: 15%;
+    padding-left: 40px;
+}
+
+
+/*Credit to mini-project-2 for the transition and box shadow effect.*/
+.cards .card-info {
+    transition: all 0.5s ease-in-out;
+}
+
+/*This will make the cards' border light up when the mouse hovers over the card*/
+.cards:hover,
+.cards:hover .card-info {
+    box-shadow: inset 0px 0px 8px
+    var(--sky-blue), 0 0 15px
+    var(--sky-blue);
+}
+
+.contact-me-section h3, ul {
+    display: inline-block;
+}
+
+.contact-me-section ul li {
+    color: var(--sky-blue);
+    margin-left: 50px;
+}
+   
+
+
 
 
 /*A media quary was added, so that the h1 and nav content will not touch or overlap.
@@ -79,14 +188,19 @@ Forcing the nav element to go under the h1 element*/
 @media only screen and (max-width: 1160px) {
     header nav {
         position: relative;
+        margin-inline: 80px;
     }
 
     /*Adds space between the the list items and the striped background, when the screen is
     smaller than 1160px*/
-    ul li {
-        margin-bottom: 50px;
+    nav ul li {
+       margin-bottom: 50px;
     }
 }
+
+
+
+
 
 
 
