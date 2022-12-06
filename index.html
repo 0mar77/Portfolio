@@ -17,13 +17,13 @@
         <nav> <!--This section will allow the user to navigate the project-->
             <ul>
                 <li>
-                    <a>About Me</a>
+                    <a href="#about-me">About Me</a> <!--Added links to each section on the page-->
                 </li>
                 <li>
-                    <a>Work</a>
+                    <a href="#work">Work</a>
                 </li>
                 <li>
-                    <a>Contact Me</a>
+                    <a href="#contact-me">Contact Me</a>
                 </li>
                 <li>
                     <a>Resume</a>
@@ -31,7 +31,7 @@
             </ul>
         </nav>
         
-        <div class="subtitle-background">
+        <div class="subtitle-background"> <!--Striped background container-->
             <div class="subtitle">
                 <h2>"Intellectual growth should commence at birth and cease only at death"</h2>
                 <p>- Albert Einstein</p>
@@ -43,44 +43,71 @@
     <!--This section was created to contain the main section of the project-->
     <main>
         
-        <section> <!--This section will tell a little bit about me-->
-            <h2>About Me</h2>
-            <p>
-                Emerging full stack developer
-            </p>
+        <section class="about-me-section" id="about-me"> <!--This section will tell a little bit about me-->
+            
+            <h3 id="about-me-h3">About Me</h3>
+            <p class="about-me-p">Hello, I am an emerging full stack developer from Veracruz, Mexico.</p>
+        
         </section>
         
-        <section> <!--This section will display my work-->
+        <section class="work-section" id="work"> <!--This section will display my work-->
+                
+            <h3 id="work-h3">Work</h3>
             
-            <h2>Work</h2>
-            
-            <div>
-                <div>
-                    <image src="assets/image1.png"></image>
-                    <div>
-                        <h3>Data Science</h3>
-                        <p>HTML, CSS and JavaScript</p>
+                <div class="card-deck"> <!--card-deck is the the cards container. It was created to contain the cards at 70% of the screen-->
+                    
+                    <div class="cards card-1"> <!--card-1 was created to target the first image and make it bigger than the rest of the images-->
+                        <image src="assets/image1.png"></image>
+                        <div class="card-info"> <!--Made a div for the card info, so that the text can be placed over the image. As well as grouping it write less code-->
+                            <h4>Data Science</h4>
+                            <p>HTML, CSS and JavaScript</p>
+                        </div>
                     </div>
+                    
+                    <div class="cards"> <!--Card class was created to prevent the reuse of code. It edits all 5 images-->
+                        <image src="assets/image2.jpg"></image>
+                        <div class="card-info">
+                            <h4>Game</h4>
+                            <p>HTML, CSS, JavaScript</p>
+                        </div>
+                    </div>
+                   
+                    <div class="cards">
+                        <image src="assets/image3.jpg"></image>
+                        <div class="card-info">
+                            <h4>Game 2</h4>
+                            <p>HTML, CSS, JavaScript</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cards">
+                        <image src="assets/image4.jpg"></image>
+                        <div class="card-info">
+                            <h4>Forest Navigator</h4>
+                            <p>HTML, CSS, JavaScript</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cards">
+                        <image src="assets/image5.jpg"></image>
+                        <div class="card-info">
+                            <h4>Bootcamp Study Guide</h4>
+                            <p>HTML, CSS, JavaScript</p>
+                        </div>
+                    </div>
+                
                 </div>
-                <div>
-                    <image src="assets/image2.jpg"></image>
-                </div>
-                <div>
-                    <image src="assets/image3.jpg"></image>
-                </div>
-                <div>
-                    <image src="assets/image4.jpg"></image>
-                </div>
-                <div>
-                    <image src="assets/image5.jpg"></image>
-                </div>
-            </div>
-        
+            
         </section>
         
-        <section> <!--This section will have my contact info, for companies interested in hiring me-->
-            <h2>Contact Me</h2>
-            <div>+55 (272) 245-0432 luisomar7411@gmail.com </div>
+        <section class="contact-me-section" id="contact-me"> <!--This section will have my contact info, for companies interested in hiring me-->
+            <h3 id="contact-me-h3">Contact Me</h3>
+            <ul>
+                <li>+55 (272) 245-0432</li>
+                <li>luisomar7411@gmail.com</li>
+                <li><a href="https://github.com/0mar77">GitHub</a></li> <!--Link to my GitHub-->
+                <li><a href="https://open.spotify.com/user/ubvsbn30274112mle4g5bvzyr?si=510626f992b64500">Spotify</a></li> <!--Link to my spotify-->
+            </ul>
         </section>
     
     </main>
